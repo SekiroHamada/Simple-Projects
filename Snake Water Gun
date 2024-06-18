@@ -1,0 +1,15 @@
+import random
+a=["snake", "gun","water"]
+while True:
+    while True:
+        ch=input("Enter Snake/Water/Gun:")
+        chnew=ch.lower()
+        if chnew in a:
+            break
+        else:
+            print("Wrong Input")
+    random_=random.choice(a)
+    print(random_)
+    win_con=[("gun","snake"),("snake","water"),("water","gun")]
+    print("You Won")if (chnew,random_) in win_con else print("draw") if chnew==random_ else print("You Lose")
+        
